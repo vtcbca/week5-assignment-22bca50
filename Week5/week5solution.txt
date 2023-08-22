@@ -1,0 +1,84 @@
+import csv
+
+with open('student.csv','w',newline='')as f:
+    w=csv.writer(f)
+    header=['sid','sname','city','contact']
+    w.writerow(header)
+
+#Insert 5 Records Directly
+    row=[[1,'pal','kamrej',8128889129],
+         [2,'meet','bharuch',8169623254],
+         [3,'priyank','mandvi',9079564523],
+         [4,'dhruv','surat',7016190797],
+         [5,'yash','bardoli',6418394675]]
+    w.writerows(row)
+
+
+#Insert 5 Records Take Input From User 
+    for i in range(5):
+        sid=int(input("Enter Student id:"))
+        sname=input("Enter Student name:")
+        city=input("Enter Student city:")
+        contact=input("Enter Student contact:")
+        row=[sid,sname,city,contact]
+        w.writerow(row)
+
+
+#Read Records From CSV File
+with open('student.csv','r') as read:
+    r=csv.reader(read)
+    for i in r:
+        print(i)
+
+
+Enter Student id: 6
+Enter Student name: veer
+Enter Student city: surat
+Enter Student contact: 9725798240
+Enter Student id: 7
+Enter Student name: dev
+Enter Student city: vyara
+Enter Student contact: 6365696462
+Enter Student id: 8
+Enter Student name: ronak
+Enter Student city: palsana
+Enter Student contact: 7925463451
+Enter Student id: 9
+Enter Student name: sujal
+Enter Student city: morbi
+Enter Student contact: 9568432761
+Enter Student id: 10
+Enter Student name: viral
+Enter Student city: kamrej
+Enter Student contact: 7095634189
+['sid', 'sname', 'city', 'contact']
+['1', 'pal', 'kamrej', '8128889129']
+['2', 'meet', 'bharuch', '8169623254']
+['3', 'priyank', 'mandvi', '9079564523']
+['4', 'dhruv', 'surat', '7016190797']
+['5', 'yash', 'bardoli', '6418394675']
+['6', 'veer', 'surat', '9725798240']
+['7', 'dev', 'vyara', '6365696462']
+['8', 'ronak', 'palsana', '7925463451']
+['9', 'sujal', 'morbi', '9568432761']
+['10', 'viral', 'kamrej', '7095634189']
+
+#Read Records From CSV File
+with open('student.csv','r') as read:
+    r=csv.reader(read)
+    for i in r:
+        print(i)
+
+['sid', 'sname', 'city', 'contact']
+['1', 'pal', 'kamrej', '8128889129']
+['2', 'meet', 'bharuch', '8169623254']
+['3', 'priyank', 'mandvi', '9079564523']
+['4', 'dhruv', 'surat', '7016190797']
+['5', 'yash', 'bardoli', '6418394675']
+['6', 'veer', 'surat', '9725798240']
+['7', 'dev', 'vyara', '6365696462']
+['8', 'ronak', 'palsana', '7925463451']
+['9', 'sujal', 'morbi', '9568432761']
+['10', 'viral', 'kamrej', '7095634189']
+
+
